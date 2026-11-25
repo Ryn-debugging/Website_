@@ -3,6 +3,7 @@ import reportFasumImg from '../assets/report-fasum.svg'
 import reportJalanImg from '../assets/report-jalan-rusak.svg'
 import reportLampuImg from '../assets/report-lampu-mati.svg'
 import reportSampahImg from '../assets/report-sampah.svg'
+import { DUMMY_CURRENT_USER_REPORTS } from './dummyUserDashboardData.js'
 
 /**
  * CATATAN KEJUJURAN & PRIVASI DATA:
@@ -490,7 +491,11 @@ export const DUMMY_PUBLIC_REPORTS = DUMMY_ALL_REPORTS.filter(
 
 // Helper pencarian berdasarkan ID laporan untuk halaman Detail Laporan (/laporan/:id)
 export function getDummyReportById(reportId) {
-  return DUMMY_ALL_REPORTS.find((report) => report.id === reportId) || null
+  return (
+    DUMMY_ALL_REPORTS.find((report) => report.id === reportId) ||
+    DUMMY_CURRENT_USER_REPORTS.find((report) => report.id === reportId) ||
+    null
+  )
 }
 
 // Sampel cepat 5 variasi status untuk memudahkan pengujian seluruh cabang UI pada Detail Laporan

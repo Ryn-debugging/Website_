@@ -6,12 +6,14 @@ import {
   Routes,
 } from 'react-router-dom'
 import MainLayout from './components/layout/MainLayout.jsx'
+import UserDashboardLayout from './components/layout/UserDashboardLayout.jsx'
 import CreateReport from './pages/CreateReport.jsx'
 import ExploreReports from './pages/ExploreReports.jsx'
 import Home from './pages/Home.jsx'
 import Login from './pages/Login.jsx'
 import Register from './pages/Register.jsx'
 import ReportDetail from './pages/ReportDetail.jsx'
+import UserDashboard from './pages/UserDashboard.jsx'
 
 /**
  * Penanda rute sementara di dalam MainLayout untuk halaman informasi yang akan
@@ -48,6 +50,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* Rute Publik & Utama */}
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/laporan" element={<ExploreReports />} />
@@ -77,8 +80,22 @@ function App() {
               />
             }
           />
-          <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
+
+        {/* Rute Dashboard Pengguna (Sidebar Desktop & Navigasi Mobile) */}
+        <Route path="/dashboard" element={<UserDashboardLayout />}>
+          <Route index element={<UserDashboard section="overview" />} />
+          <Route
+            path="laporan-saya"
+            element={<UserDashboard section="reports" />}
+          />
+          <Route
+            path="profil"
+            element={<UserDashboard section="profile" />}
+          />
+        </Route>
+
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   )

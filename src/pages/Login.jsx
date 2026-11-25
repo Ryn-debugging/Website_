@@ -190,15 +190,27 @@ function Login() {
         </div>
 
         {/* Informasi UI Sementara & Tautan Registrasi */}
-        <div className="pt-4 border-t border-line flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-muted">
-          <span>Belum punya akun LaporWarga?</span>
-          <Link
-            id="login-bottom-register-link"
-            to="/daftar"
-            className="font-semibold text-navy hover:text-teal transition-colors"
-          >
-            Buat Akun Warga &rarr;
-          </Link>
+        <div className="pt-4 border-t border-line space-y-2.5 text-xs text-muted">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <span>Belum punya akun LaporWarga?</span>
+            <Link
+              id="login-bottom-register-link"
+              to="/daftar"
+              className="font-semibold text-navy hover:text-teal transition-colors"
+            >
+              Buat Akun Warga &rarr;
+            </Link>
+          </div>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-2 border-t border-line/70">
+            <span>Mode Pratinjau UI (Tanpa Sesi Login):</span>
+            <Link
+              id="login-preview-user-dashboard-link"
+              to="/dashboard"
+              className="font-semibold text-teal hover:text-teal-800 transition-colors"
+            >
+              Buka Pratinjau Dashboard Warga &rarr;
+            </Link>
+          </div>
         </div>
       </form>
     </AuthShell>
