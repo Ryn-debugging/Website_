@@ -203,13 +203,22 @@ function Login() {
           </div>
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-2 border-t border-line/70">
             <span>Mode Pratinjau UI (Tanpa Sesi Login):</span>
-            <Link
-              id="login-preview-user-dashboard-link"
-              to="/dashboard"
-              className="font-semibold text-teal hover:text-teal-800 transition-colors"
-            >
-              Buka Pratinjau Dashboard Warga &rarr;
-            </Link>
+            <div className="flex flex-wrap items-center gap-3">
+              <Link
+                id="login-preview-user-dashboard-link"
+                to="/dashboard"
+                className="font-semibold text-teal hover:text-teal-800 transition-colors"
+              >
+                Dashboard Warga &rarr;
+              </Link>
+              <Link
+                id="login-preview-admin-dashboard-link"
+                to="/admin"
+                className="font-semibold text-navy hover:text-teal transition-colors"
+              >
+                Dashboard Admin &rarr;
+              </Link>
+            </div>
           </div>
         </div>
       </form>

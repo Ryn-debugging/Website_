@@ -5,8 +5,10 @@ import {
   Route,
   Routes,
 } from 'react-router-dom'
+import AdminDashboardLayout from './components/layout/AdminDashboardLayout.jsx'
 import MainLayout from './components/layout/MainLayout.jsx'
 import UserDashboardLayout from './components/layout/UserDashboardLayout.jsx'
+import AdminDashboard from './pages/AdminDashboard.jsx'
 import CreateReport from './pages/CreateReport.jsx'
 import ExploreReports from './pages/ExploreReports.jsx'
 import Home from './pages/Home.jsx'
@@ -82,7 +84,7 @@ function App() {
           />
         </Route>
 
-        {/* Rute Dashboard Pengguna (Sidebar Desktop & Navigasi Mobile) */}
+        {/* Rute Dashboard Pengguna (Warga) */}
         <Route path="/dashboard" element={<UserDashboardLayout />}>
           <Route index element={<UserDashboard section="overview" />} />
           <Route
@@ -92,6 +94,32 @@ function App() {
           <Route
             path="profil"
             element={<UserDashboard section="profile" />}
+          />
+        </Route>
+
+        {/* Rute Admin Dashboard (Pengelola) */}
+        <Route path="/admin" element={<AdminDashboardLayout />}>
+          <Route index element={<AdminDashboard view="dashboard" />} />
+          <Route path="laporan" element={<AdminDashboard view="all" />} />
+          <Route
+            path="menunggu-verifikasi"
+            element={<AdminDashboard view="pending" />}
+          />
+          <Route
+            path="sedang-diproses"
+            element={<AdminDashboard view="processing" />}
+          />
+          <Route
+            path="selesai"
+            element={<AdminDashboard view="resolved" />}
+          />
+          <Route
+            path="kategori"
+            element={<AdminDashboard view="categories" />}
+          />
+          <Route
+            path="pengaturan"
+            element={<AdminDashboard view="settings" />}
           />
         </Route>
 

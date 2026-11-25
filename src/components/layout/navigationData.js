@@ -15,11 +15,13 @@ export const AUTH_ACTION_LINKS = {
   register: { id: 'daftar', label: 'Daftar Akun', to: '/daftar' },
   createReport: { id: 'buat-laporan', label: 'Buat Laporan', to: '/buat-laporan' },
   userDashboard: { id: 'dashboard', label: 'Dashboard Warga', to: '/dashboard' },
+  adminDashboard: { id: 'admin', label: 'Dashboard Admin', to: '/admin' },
 }
 
 export const FOOTER_NAV_LINKS = [
   ...MAIN_NAV_LINKS,
   AUTH_ACTION_LINKS.userDashboard,
+  AUTH_ACTION_LINKS.adminDashboard,
   AUTH_ACTION_LINKS.login,
   AUTH_ACTION_LINKS.register,
   AUTH_ACTION_LINKS.createReport,

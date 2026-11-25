@@ -21,6 +21,13 @@ function StatIcon({ variant }) {
           <path d="m8.5 12.5 2.5 2.5 5-5" />
         </svg>
       )
+    case 'rejected':
+      return (
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="9" />
+          <path d="m15 9-6 6M9 9l6 6" />
+        </svg>
+      )
     default:
       return (
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
@@ -47,6 +54,10 @@ const VARIANT_STYLES = {
   resolved: {
     iconWrap: 'bg-success-soft text-success-ink',
     valueText: 'text-success',
+  },
+  rejected: {
+    iconWrap: 'bg-danger-soft text-danger-ink',
+    valueText: 'text-danger',
   },
 }
 
