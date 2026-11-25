@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" fill="#EBF2F7" />
+  <!-- Park Lawn & Trees -->
+  <circle cx="128" cy="128" r="48" fill="#16865B" fill-opacity="0.85" />
+  <circle cx="174" cy="146" r="32" fill="#168C83" fill-opacity="0.8" />
+  <circle cx="516" cy="124" r="46" fill="#16865B" fill-opacity="0.85" />
+  <rect x="0" y="198" width="640" height="62" fill="#B9DDD8" />
+  <rect x="0" y="260" width="640" height="100" fill="#DCE4EE" />
+  <!-- Damaged Park Bench (Fasilitas Umum) -->
+  <rect x="212" y="186" width="216" height="14" rx="4" fill="#D99A2B" />
+  <!-- Broken / Tilted Middle Slat -->
+  <rect x="212" y="208" width="102" height="12" rx="3" fill="#BA811E" />
+  <rect x="322" y="214" width="106" height="12" rx="3" fill="#BA811E" transform="rotate(9 322 214)" />
+  <!-- Bench Seat & Legs -->
+  <rect x="198" y="236" width="244" height="12" rx="4" fill="#173B57" />
+  <rect x="224" y="248" width="12" height="34" rx="2" fill="#173B57" />
+  <rect x="404" y="248" width="12" height="34" rx="2" fill="#173B57" />
+</svg>

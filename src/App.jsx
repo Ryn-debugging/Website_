@@ -5,68 +5,78 @@ import {
   Route,
   Routes,
   useParams,
-  useSearchParams,
 } from 'react-router-dom'
+import StatusBadge from './components/common/StatusBadge.jsx'
 import MainLayout from './components/layout/MainLayout.jsx'
+import ExploreReports from './pages/ExploreReports.jsx'
 import Home from './pages/Home.jsx'
-import { DUMMY_RECENT_REPORTS, REPORT_CATEGORIES } from './utils/dummyLandingData.js'
+import { DUMMY_PUBLIC_REPORTS } from './utils/dummyReportsData.js'
 
 /**
- * Penanda rute sementara di dalam MainLayout agar seluruh tombol & tautan
- * pada Landing Page, Navbar, dan Footer berfungsi penuh sebelum halaman terkait dibangun.
+ * Penanda rute sementara di dalam MainLayout untuk halaman yang akan dibangun
+ * pada tahap berikutnya (termasuk pratinjau klik kartu menuju /laporan/:id).
  */
 function RouteSectionNotice({ eyebrow, title, description }) {
-  const [searchParams] = useSearchParams()
   const { id } = useParams()
 
-  const selectedCategorySlug = searchParams.get('kategori')
-  const matchedCategory = REPORT_CATEGORIES.find(
-    (cat) => cat.id === selectedCategorySlug,
-  )
-  const matchedDummyReport = DUMMY_RECENT_REPORTS.find(
+  const matchedDummyReport = DUMMY_PUBLIC_REPORTS.find(
     (report) => report.id === id,
   )
 
   return (
     <section className="lw-section flex-1 flex items-center">
       <div className="lw-container max-w-2xl">
-        <div className="card p-6 sm:p-8 space-y-4">
+        <div className="card p-6 sm:p-8 space-y-5">
           <div className="flex items-center justify-between gap-3 flex-wrap">
             <p className="text-eyebrow text-teal">{eyebrow}</p>
-            <span className="badge badge-verified">
+            <span className="badge badge-pending">
               <span className="badge-dot" aria-hidden="true" />
-              Navigasi Aktif
+              {matchedDummyReport ? 'Data Dummy' : 'Rute Aktif'}
             </span>
           </div>
 
-          <h1 className="heading-1">{title}</h1>
-
-          {matchedCategory && (
-            <div className="p-3.5 rounded-md bg-surface-subtle border border-line text-body-sm">
-              Filter Kategori Terpilih:{' '}
-              <strong className="text-navy">{matchedCategory.name}</strong>
-            </div>
-          )}
+          <h1 className="heading-1">
+            {matchedDummyReport ? matchedDummyReport.title : title}
+          </h1>
 
           {matchedDummyReport && (
-            <div className="p-3.5 rounded-md bg-surface-subtle border border-line space-y-1 text-body-sm">
-              <p className="text-xs font-bold uppercase text-warning-ink">
-                Data Dummy ({matchedDummyReport.code})
-              </p>
-              <p className="font-semibold text-ink">{matchedDummyReport.title}</p>
-              <p className="text-muted">{matchedDummyReport.location}</p>
+            <div className="rounded-lg overflow-hidden border border-line bg-surface-subtle">
+              <img
+                src={matchedDummyReport.photo}
+                alt={matchedDummyReport.photoAlt}
+                className="w-full aspect-16/9 object-cover border-b border-line"
+              />
+              <div className="p-4 space-y-2.5 text-body-sm">
+                <div className="flex items-center justify-between gap-2 flex-wrap">
+                  <span className="badge badge-neutral">
+                    {matchedDummyReport.category}
+                  </span>
+                  <StatusBadge status={matchedDummyReport.status} />
+                </div>
+                <p className="text-ink-secondary">{matchedDummyReport.summary}</p>
+                <div className="pt-2 border-t border-line flex flex-wrap items-center justify-between gap-2 text-xs text-muted">
+                  <span>{matchedDummyReport.location}</span>
+                  <span>{matchedDummyReport.date}</span>
+                </div>
+              </div>
             </div>
           )}
 
           <p className="text-body text-muted">{description}</p>
 
           <div className="pt-2 flex flex-wrap items-center gap-3">
-            <Link id="notice-back-home" to="/" className="btn btn-primary">
-              Kembali ke Beranda
-            </Link>
+            {id ? (
+              <Link id="notice-back-reports" to="/laporan" className="btn btn-primary">
+                &larr; Kembali ke Jelajahi Laporan
+              </Link>
+            ) : (
+              <Link id="notice-back-home" to="/" className="btn btn-primary">
+                Kembali ke Beranda
+              </Link>
+            )}
             {id && (
-              <Link id="notice-all-reports" to="/laporan" className="btn btn-outline">
-                Ke Daftar Laporan
+              <Link id="notice-home-secondary" to="/" className="btn btn-outline">
+                Beranda
               </Link>
             )}
           </div>
@@ -82,23 +92,14 @@ function App() {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
-          <Route
-            path="/laporan"
-            element={
-              <RouteSectionNotice
-                eyebrow="Publik • Daftar Laporan"
-                title="Jelajahi Laporan Masyarakat"
-                description="Halaman daftar laporan siap diimplementasikan pada tahap berikutnya dengan fitur filter kategori, filter status, dan pencarian."
-              />
-            }
-          />
+          <Route path="/laporan" element={<ExploreReports />} />
           <Route
             path="/laporan/:id"
             element={
               <RouteSectionNotice
-                eyebrow="Publik • Detail Laporan"
-                title="Pratinjau Rute Detail Laporan"
-                description="Halaman detail laporan lengkap dengan peta lokasi dan riwayat tindak lanjut akan diimplementasikan pada tahap berikutnya."
+                eyebrow="Publik • Detail Laporan (Pratinjau Rute)"
+                title="Detail Laporan Masyarakat"
+                description="Navigasi dari kartu laporan berhasil membuka rute detail laporan ini. Halaman detail penuh beserta riwayat pembaruan status dan peta akan disempurnakan pada tahap halaman detail laporan."
               />
             }
           />

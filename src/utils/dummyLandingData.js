@@ -1,6 +1,4 @@
-import reportDrainaseImg from '../assets/report-drainase.svg'
-import reportJalanImg from '../assets/report-jalan-rusak.svg'
-import reportLampuImg from '../assets/report-lampu-mati.svg'
+import { DUMMY_PUBLIC_REPORTS } from './dummyReportsData.js'
 
 /**
  * CATATAN PENTING:
@@ -47,54 +45,17 @@ export const REPORT_CATEGORIES = [
   },
 ]
 
-export const DUMMY_RECENT_REPORTS = [
-  {
-    id: 'dummy-01',
-    code: 'DUMMY-001',
-    isDummy: true,
-    title: 'Contoh: Permukaan Aspal Berlubang di Tikungan Jalan Lingkungan',
-    category: 'Jalan Rusak',
-    categorySlug: 'jalan-rusak',
-    location: 'Jl. Contoh Melati Blok A (Lokasi Dummy)',
-    status: 'sedang_diproses',
-    photo: reportJalanImg,
-    photoAlt: 'Ilustrasi contoh laporan jalan berlubang di lingkungan warga',
-  },
-  {
-    id: 'dummy-02',
-    code: 'DUMMY-002',
-    isDummy: true,
-    title: 'Contoh: Dua Titik Lampu Penerangan Jalan Padam Sejak Kemarin',
-    category: 'Lampu Jalan',
-    categorySlug: 'lampu-jalan',
-    location: 'Gang Contoh Kenanga RT 03 (Lokasi Dummy)',
-    status: 'diverifikasi',
-    photo: reportLampuImg,
-    photoAlt: 'Ilustrasi contoh laporan lampu penerangan jalan padam saat malam',
-  },
-  {
-    id: 'dummy-03',
-    code: 'DUMMY-003',
-    isDummy: true,
-    title: 'Contoh: Saluran Drainase Tersumbat Ranting dan Daun Kering',
-    category: 'Drainase',
-    categorySlug: 'drainase',
-    location: 'Jl. Contoh Cempaka No. 12 (Lokasi Dummy)',
-    status: 'selesai',
-    photo: reportDrainaseImg,
-    photoAlt: 'Ilustrasi contoh laporan saluran drainase tersumbat daun kering',
-  },
-]
+export const DUMMY_RECENT_REPORTS = DUMMY_PUBLIC_REPORTS.slice(0, 3)
 
 /**
- * Statistik dihitung langsung dari 3 item contoh dummy di atas (bukan angka klaim nyata)
- * agar tetap jujur sebelum integrasi database.
+ * Statistik dihitung langsung dari daftar contoh laporan dummy (bukan angka klaim nyata)
+ * agar konsisten antara Beranda dan halaman Jelajahi Laporan.
  */
-const totalDummy = DUMMY_RECENT_REPORTS.length
-const diprosesDummy = DUMMY_RECENT_REPORTS.filter(
+const totalDummy = DUMMY_PUBLIC_REPORTS.length
+const diprosesDummy = DUMMY_PUBLIC_REPORTS.filter(
   (item) => item.status === 'sedang_diproses',
 ).length
-const selesaiDummy = DUMMY_RECENT_REPORTS.filter(
+const selesaiDummy = DUMMY_PUBLIC_REPORTS.filter(
   (item) => item.status === 'selesai',
 ).length
 
@@ -104,21 +65,21 @@ export const DUMMY_SUMMARY_STATS = [
     label: 'Total Laporan (Contoh Dummy)',
     value: String(totalDummy),
     accentClass: 'text-navy',
-    note: 'Simulasi dari daftar contoh laporan di halaman ini (belum terhubung database).',
+    note: 'Jumlah seluruh item contoh simulasi UI (belum terhubung database).',
   },
   {
     id: 'stat-diproses',
     label: 'Sedang Diproses (Contoh Dummy)',
     value: String(diprosesDummy),
     accentClass: 'text-teal',
-    note: 'Contoh laporan yang sedang dalam tahap penanganan lapangan.',
+    note: 'Contoh laporan dummy yang sedang dalam tahap penanganan.',
   },
   {
     id: 'stat-selesai',
     label: 'Selesai (Contoh Dummy)',
     value: String(selesaiDummy),
     accentClass: 'text-success',
-    note: 'Contoh laporan yang telah tuntas ditindaklanjuti pengelola.',
+    note: 'Contoh laporan dummy yang berstatus selesai ditindaklanjuti.',
   },
 ]
 

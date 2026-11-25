@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" fill="#F0F5FA" />
+  <!-- Background Fence & Trees -->
+  <circle cx="116" cy="126" r="44" fill="#16865B" fill-opacity="0.8" />
+  <circle cx="518" cy="118" r="48" fill="#168C83" fill-opacity="0.78" />
+  <rect x="0" y="136" width="640" height="84" fill="#E4ECF4" />
+  <line x1="0" y1="136" x2="640" y2="136" stroke="#ADC8DD" stroke-width="4" />
+  <!-- Sidewalk & Curb -->
+  <rect x="0" y="220" width="640" height="34" fill="#CBD5E1" />
+  <rect x="0" y="254" width="640" height="106" fill="#202B38" />
+  <!-- Overflowing Public Trash Bin & Trash Bags -->
+  <rect x="208" y="156" width="68" height="86" rx="6" fill="#16865B" />
+  <rect x="202" y="146" width="80" height="12" rx="4" fill="#0F5E40" transform="rotate(-8 202 146)" />
+  <!-- Piled Bags Beside Bin -->
+  <path d="M276 242C276 212 298 194 324 194C350 194 370 214 370 242H276Z" fill="#173B57" />
+  <path d="M342 246C342 222 360 206 384 206C408 206 426 222 426 246H342Z" fill="#475569" />
+  <rect x="418" y="218" width="44" height="28" rx="3" fill="#D99A2B" fill-opacity="0.85" />
+  <circle cx="256" cy="246" r="10" fill="#DCE4EE" />
+</svg>
