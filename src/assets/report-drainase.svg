@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" fill="#F0F5FA" />
+  <!-- Neighborhood Wall & Greenery -->
+  <rect x="0" y="96" width="640" height="92" fill="#FFFFFF" />
+  <line x1="0" y1="96" x2="640" y2="96" stroke="#C2CFE0" stroke-width="4" />
+  <rect x="48" y="80" width="16" height="108" fill="#DCE4EE" />
+  <rect x="248" y="80" width="16" height="108" fill="#DCE4EE" />
+  <rect x="448" y="80" width="16" height="108" fill="#DCE4EE" />
+  <circle cx="152" cy="76" r="36" fill="#16865B" fill-opacity="0.85" />
+  <circle cx="368" cy="72" r="42" fill="#168C83" fill-opacity="0.8" />
+  <circle cx="548" cy="78" r="34" fill="#16865B" fill-opacity="0.85" />
+
+  <!-- Concrete Curb & Drainage Channel (Selokan) -->
+  <rect x="0" y="188" width="640" height="24" fill="#CBD5E1" />
+  <rect x="0" y="212" width="640" height="74" fill="#94A3B8" />
+  <!-- Pooled Water Inside Channel -->
+  <rect x="0" y="226" width="640" height="48" fill="#23557A" fill-opacity="0.72" />
+  <line x1="42" y1="244" x2="148" y2="244" stroke="#EBF2F7" stroke-width="3" stroke-linecap="round" stroke-opacity="0.6" />
+  <line x1="438" y1="254" x2="564" y2="254" stroke="#EBF2F7" stroke-width="3" stroke-linecap="round" stroke-opacity="0.6" />
+
+  <!-- Debris / Fallen Leaves Blockage -->
+  <ellipse cx="308" cy="248" rx="68" ry="22" fill="#8A5B0A" />
+  <ellipse cx="286" cy="244" rx="28" ry="12" fill="#D99A2B" />
+  <ellipse cx="334" cy="252" rx="30" ry="11" fill="#126E4B" />
+  <path d="M254 236L358 258M272 260L344 234" stroke="#5C3D06" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Lower Curb & Road Edge -->
+  <rect x="0" y="286" width="640" height="18" fill="#CBD5E1" />
+  <rect x="0" y="304" width="640" height="56" fill="#202B38" />
+</svg>

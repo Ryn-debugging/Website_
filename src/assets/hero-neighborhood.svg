@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" fill="none">
+  <!-- Sky Canvas -->
+  <rect width="640" height="480" rx="16" fill="#F0F5FA" />
+
+  <!-- Soft Sun & Clouds -->
+  <circle cx="516" cy="94" r="38" fill="#FDF5E6" />
+  <circle cx="516" cy="94" r="24" fill="#D99A2B" fill-opacity="0.85" />
+
+  <path d="M96 96C96 84.9543 104.954 76 116 76H168C179.046 76 188 84.9543 188 96C188 98.2091 186.209 100 184 100H100C97.7909 100 96 98.2091 96 96Z" fill="#FFFFFF" />
+  <circle cx="126" cy="78" r="16" fill="#FFFFFF" />
+  <circle cx="152" cy="74" r="20" fill="#FFFFFF" />
+
+  <path d="M332 74C332 65.1634 339.163 58 348 58H392C400.837 58 408 65.1634 408 74C408 76.2091 406.209 78 404 78H336C333.791 78 332 76.2091 332 74Z" fill="#FFFFFF" fill-opacity="0.85" />
+  <circle cx="364" cy="58" r="14" fill="#FFFFFF" fill-opacity="0.85" />
+
+  <!-- Distant Hills & Greenery -->
+  <path d="M0 296C112 262 224 268 336 292C448 316 544 278 640 264V360H0V296Z" fill="#D4E8E5" />
+  <path d="M0 322C148 298 286 312 418 326C512 336 584 316 640 308V380H0V322Z" fill="#B9DDD8" />
+
+  <!-- Neighborhood Community Buildings & Houses -->
+  <!-- Left Civic Building / Balai Warga -->
+  <rect x="64" y="214" width="136" height="118" rx="4" fill="#FFFFFF" stroke="#DCE4EE" stroke-width="2" />
+  <path d="M52 218L132 168L212 218H52Z" fill="#173B57" />
+  <rect x="86" y="238" width="28" height="32" rx="3" fill="#EBF2F7" stroke="#ADC8DD" stroke-width="1.5" />
+  <rect x="150" y="238" width="28" height="32" rx="3" fill="#EBF2F7" stroke="#ADC8DD" stroke-width="1.5" />
+  <rect x="118" y="274" width="28" height="58" rx="3" fill="#168C83" />
+  <rect x="110" y="202" width="44" height="10" rx="2" fill="#168C83" />
+
+  <!-- Center-Right Modern Neighborhood Homes -->
+  <rect x="242" y="234" width="112" height="98" rx="4" fill="#FFFFFF" stroke="#DCE4EE" stroke-width="2" />
+  <path d="M232 238L298 194L364 238H232Z" fill="#23557A" />
+  <rect x="262" y="256" width="32" height="30" rx="3" fill="#FDF5E6" stroke="#D99A2B" stroke-width="1.5" />
+  <rect x="308" y="256" width="26" height="76" rx="3" fill="#173B57" />
+
+  <rect x="388" y="222" width="124" height="110" rx="4" fill="#FFFFFF" stroke="#DCE4EE" stroke-width="2" />
+  <path d="M378 226L450 182L522 226H378Z" fill="#168C83" />
+  <rect x="408" y="246" width="36" height="34" rx="3" fill="#EBF2F7" stroke="#ADC8DD" stroke-width="1.5" />
+  <rect x="458" y="246" width="34" height="34" rx="3" fill="#EBF2F7" stroke="#ADC8DD" stroke-width="1.5" />
+  <rect x="436" y="290" width="28" height="42" rx="3" fill="#23557A" />
+
+  <!-- Lush Neighborhood Trees -->
+  <g>
+    <rect x="214" y="286" width="8" height="46" rx="2" fill="#173B57" />
+    <circle cx="218" cy="272" r="24" fill="#16865B" />
+    <circle cx="206" cy="282" r="16" fill="#168C83" />
+  </g>
+  <g>
+    <rect x="548" y="268" width="10" height="64" rx="2" fill="#173B57" />
+    <circle cx="553" cy="248" r="30" fill="#16865B" />
+    <circle cx="570" cy="262" r="20" fill="#168C83" />
+    <circle cx="536" cy="264" r="18" fill="#126E4B" />
+  </g>
+  <g>
+    <rect x="34" y="278" width="8" height="54" rx="2" fill="#173B57" />
+    <circle cx="38" cy="264" r="22" fill="#168C83" />
+  </g>
+
+  <!-- Active Streetlight (Lampu Jalan) -->
+  <path d="M372 332V168C372 156.954 380.954 148 392 148H408" stroke="#173B57" stroke-width="5" stroke-linecap="round" />
+  <rect x="402" y="144" width="18" height="8" rx="4" fill="#173B57" />
+  <path d="M394 152H426L442 214H378L394 152Z" fill="#D99A2B" fill-opacity="0.16" />
+  <circle cx="411" cy="153" r="4" fill="#D99A2B" />
+
+  <!-- Clean Sidewalk & Drainage Channel -->
+  <rect x="0" y="332" width="640" height="18" fill="#DCE4EE" />
+  <rect x="0" y="350" width="640" height="10" fill="#93D5CF" />
+  <line x1="0" y1="350" x2="640" y2="350" stroke="#168C83" stroke-width="2" />
+
+  <!-- Clean Paved Neighborhood Road -->
+  <rect x="0" y="360" width="640" height="120" fill="#173B57" />
+  <rect x="0" y="360" width="640" height="6" fill="#23557A" />
+  <!-- Road Markings -->
+  <line x1="40" y1="418" x2="112" y2="418" stroke="#F7F9FC" stroke-width="5" stroke-linecap="round" stroke-opacity="0.75" />
+  <line x1="176" y1="418" x2="248" y2="418" stroke="#F7F9FC" stroke-width="5" stroke-linecap="round" stroke-opacity="0.75" />
+  <line x1="312" y1="418" x2="384" y2="418" stroke="#F7F9FC" stroke-width="5" stroke-linecap="round" stroke-opacity="0.75" />
+  <line x1="448" y1="418" x2="520" y2="418" stroke="#F7F9FC" stroke-width="5" stroke-linecap="round" stroke-opacity="0.75" />
+  <line x1="584" y1="418" x2="620" y2="418" stroke="#F7F9FC" stroke-width="5" stroke-linecap="round" stroke-opacity="0.75" />
+
+  <!-- Park Bench & Trash Bin (Fasilitas Umum & Kebersihan) -->
+  <rect x="488" y="314" width="42" height="6" rx="2" fill="#D99A2B" />
+  <rect x="488" y="322" width="42" height="4" rx="2" fill="#173B57" />
+  <line x1="494" y1="326" x2="494" y2="332" stroke="#173B57" stroke-width="3" />
+  <line x1="524" y1="326" x2="524" y2="332" stroke="#173B57" stroke-width="3" />
+
+  <rect x="462" y="312" width="14" height="20" rx="2" fill="#16865B" />
+  <rect x="460" y="309" width="18" height="4" rx="1.5" fill="#0F5E40" />
+
+  <!-- Floating Civic Verification Card Overlay (Visual Storytelling, No Text Clutter) -->
+  <g filter="drop-shadow(0 8px 18px rgba(23, 59, 87, 0.14))">
+    <rect x="44" y="108" width="164" height="58" rx="10" fill="#FFFFFF" stroke="#DCE4EE" stroke-width="1.5" />
+    <circle cx="72" cy="137" r="15" fill="#E8F6F0" />
+    <path d="M66 137.5L70.2 141.5L78.5 133" stroke="#16865B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <rect x="98" y="125" width="84" height="8" rx="4" fill="#173B57" />
+    <rect x="98" y="141" width="58" height="7" rx="3.5" fill="#168C83" fill-opacity="0.65" />
+  </g>
+
+  <!-- Civic Location Pin Indicator Over Repaired Road -->
+  <g filter="drop-shadow(0 6px 12px rgba(23, 59, 87, 0.22))">
+    <path d="M298 318C284.745 318 274 328.745 274 342C274 358.5 298 380 298 380C298 380 322 358.5 322 342C322 328.745 311.255 318 298 318Z" fill="#168C83" stroke="#FFFFFF" stroke-width="3" />
+    <circle cx="298" cy="342" r="8" fill="#FFFFFF" />
+  </g>
+</svg>

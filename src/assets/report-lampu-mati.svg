@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <!-- Dusk Sky -->
+  <rect width="640" height="360" fill="#173B57" />
+  <rect y="140" width="640" height="120" fill="#1C4767" />
+  <circle cx="118" cy="78" r="18" fill="#F7F9FC" fill-opacity="0.85" />
+  <circle cx="126" cy="72" r="16" fill="#173B57" />
+  <!-- Silhouette Houses & Warm Lit Windows -->
+  <rect x="56" y="182" width="138" height="86" fill="#102A3F" />
+  <path d="M44 184L125 142L206 184H44Z" fill="#0A1C2B" />
+  <rect x="82" y="206" width="26" height="26" rx="2" fill="#D99A2B" fill-opacity="0.85" />
+  <rect x="140" y="206" width="26" height="26" rx="2" fill="#D99A2B" fill-opacity="0.65" />
+
+  <rect x="442" y="174" width="146" height="94" fill="#102A3F" />
+  <path d="M430 176L515 134L600 176H430Z" fill="#0A1C2B" />
+  <rect x="472" y="202" width="30" height="26" rx="2" fill="#D99A2B" fill-opacity="0.75" />
+
+  <!-- Unlit Streetlight Pole (Center Focus) -->
+  <path d="M304 292V92C304 76.536 316.536 64 332 64H368" stroke="#93D5CF" stroke-width="7" stroke-linecap="round" />
+  <rect x="360" y="58" width="34" height="12" rx="5" fill="#475569" />
+  <rect x="366" y="70" width="22" height="6" rx="3" fill="#718096" />
+  <!-- Dashed Unlit Indicator Circle -->
+  <circle cx="377" cy="74" r="24" stroke="#D99A2B" stroke-width="2" stroke-dasharray="5 5" />
+
+  <!-- Sidewalk & Night Road -->
+  <rect x="0" y="268" width="640" height="20" fill="#23557A" />
+  <rect x="0" y="288" width="640" height="72" fill="#0A1C2B" />
+  <line x1="80" y1="324" x2="180" y2="324" stroke="#718096" stroke-width="4" stroke-linecap="round" />
+  <line x1="270" y1="324" x2="370" y2="324" stroke="#718096" stroke-width="4" stroke-linecap="round" />
+  <line x1="460" y1="324" x2="560" y2="324" stroke="#718096" stroke-width="4" stroke-linecap="round" />
+</svg>

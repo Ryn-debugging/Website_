@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" fill="#EBF2F7" />
+  <!-- Background Houses & Trees -->
+  <path d="M0 156L90 112L180 156V210H0V156Z" fill="#D4E3EE" />
+  <rect x="28" y="156" width="124" height="54" fill="#FFFFFF" />
+  <path d="M18 156L90 116L162 156H18Z" fill="#23557A" />
+  <circle cx="228" cy="158" r="34" fill="#16865B" fill-opacity="0.8" />
+  <circle cx="536" cy="148" r="42" fill="#168C83" fill-opacity="0.75" />
+  <circle cx="578" cy="164" r="28" fill="#16865B" fill-opacity="0.85" />
+  <!-- Sidewalk -->
+  <rect x="0" y="196" width="640" height="22" fill="#CBD5E1" />
+  <!-- Asphalt Street -->
+  <rect x="0" y="218" width="640" height="142" fill="#202B38" />
+  <line x1="36" y1="286" x2="132" y2="286" stroke="#F7F9FC" stroke-width="5" stroke-linecap="round" stroke-opacity="0.55" />
+  <line x1="504" y1="286" x2="600" y2="286" stroke="#F7F9FC" stroke-width="5" stroke-linecap="round" stroke-opacity="0.55" />
+  <!-- Pothole / Damaged Road Surface -->
+  <path d="M218 282C226 262 272 252 326 256C378 260 422 274 414 298C406 320 356 328 298 326C246 324 210 302 218 282Z" fill="#101720" stroke="#475569" stroke-width="4" />
+  <path d="M244 286C254 274 292 268 332 272C368 275 390 286 382 298C374 310 336 314 294 312C260 310 236 298 244 286Z" fill="#23557A" fill-opacity="0.45" />
+  <path d="M188 274L218 282M414 296L448 308M312 255L306 238" stroke="#475569" stroke-width="2.5" stroke-linecap="round" />
+  <!-- Warning Marker Cone -->
+  <polygon points="454,284 470,228 486,284" fill="#D99A2B" />
+  <polygon points="461,260 465,246 475,246 479,260" fill="#FFFFFF" />
+  <rect x="446" y="282" width="48" height="7" rx="3" fill="#8A5B0A" />
+</svg>
