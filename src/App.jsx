@@ -6,6 +6,7 @@ import {
   Routes,
 } from 'react-router-dom'
 import MainLayout from './components/layout/MainLayout.jsx'
+import CreateReport from './pages/CreateReport.jsx'
 import ExploreReports from './pages/ExploreReports.jsx'
 import Home from './pages/Home.jsx'
 import ReportDetail from './pages/ReportDetail.jsx'
@@ -49,6 +50,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/laporan" element={<ExploreReports />} />
           <Route path="/laporan/:id" element={<ReportDetail />} />
+          <Route path="/buat-laporan" element={<CreateReport />} />
           <Route
             path="/panduan"
             element={
@@ -76,16 +78,6 @@ function App() {
                 eyebrow="Autentikasi • Akun Warga & Admin"
                 title="Masuk ke Akun LaporWarga"
                 description="Halaman login dan registrasi pengguna akan diimplementasikan pada tahap pembuatan halaman autentikasi."
-              />
-            }
-          />
-          <Route
-            path="/buat-laporan"
-            element={
-              <RouteSectionNotice
-                eyebrow="Layanan Warga • Pengiriman Aduan"
-                title="Buat Laporan Baru"
-                description="Formulir pembuatan laporan beserta unggah foto bukti dan penentuan lokasi kejadian akan diimplementasikan pada tahap berikutnya."
               />
             }
           />
