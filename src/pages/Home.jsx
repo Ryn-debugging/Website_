@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import {
   BREAKPOINTS,
   COLOR_PALETTE_DOCS,
@@ -11,51 +10,9 @@ const STATUS_LIST = Object.values(REPORT_STATUS)
 
 function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-canvas text-ink">
-      {/* Top Civic Header (Navy #173B57) */}
-      <header className="sticky top-0 z-30 bg-navy text-white border-b border-white/10">
-        <div className="lw-container h-16 flex items-center justify-between gap-4">
-          <Link
-            id="brand-logo-link"
-            to="/"
-            className="inline-flex items-center gap-2.5 text-white font-bold text-lg tracking-tight hover:opacity-90 transition-opacity"
-          >
-            <span
-              aria-hidden="true"
-              className="w-8 h-8 rounded-md bg-teal text-white flex items-center justify-center text-sm font-extrabold"
-            >
-              LW
-            </span>
-            <span>LaporWarga</span>
-          </Link>
-
-          <nav
-            aria-label="Navigasi Design System"
-            className="hidden md:flex items-center gap-6 text-sm font-medium text-white/85"
-          >
-            <a id="nav-tokens" href="#palet-warna" className="hover:text-white transition-colors">
-              Warna
-            </a>
-            <a id="nav-typography" href="#tipografi" className="hover:text-white transition-colors">
-              Tipografi
-            </a>
-            <a id="nav-components" href="#komponen-ui" className="hover:text-white transition-colors">
-              Komponen
-            </a>
-            <a id="nav-badges" href="#status-badge" className="hover:text-white transition-colors">
-              Status Laporan
-            </a>
-          </nav>
-
-          <a id="header-cta-komponen" href="#komponen-ui" className="btn btn-primary btn-sm">
-            Lihat Standar UI
-          </a>
-        </div>
-      </header>
-
-      <main className="flex-1">
-        {/* Civic Hero Section — Navy #173B57 + Teal #168C83 */}
-        <section className="bg-navy text-white py-12 sm:py-16 lg:py-20 border-b border-navy-900">
+    <div className="flex flex-col">
+      {/* Civic Hero Section — Navy #173B57 + Teal #168C83 */}
+      <section className="bg-navy text-white py-12 sm:py-16 lg:py-20 border-b border-navy-900">
           <div className="lw-container">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               <div className="lg:col-span-7 space-y-5">
@@ -550,16 +507,6 @@ function Home() {
             </div>
           </div>
         </section>
-      </main>
-
-      <footer className="bg-surface border-t border-line">
-        <div className="lw-container py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-body-sm text-muted">
-          <p className="font-semibold text-navy">
-            LaporWarga &mdash; Modern Civic Technology Design System
-          </p>
-          <p>Phase 2 (Design System &amp; Tokens Siap Digunakan)</p>
-        </div>
-      </footer>
     </div>
   )
 }

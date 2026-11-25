@@ -756,4 +756,89 @@
     color: var(--lw-text-secondary);
     border-color: var(--lw-border);
   }
+
+  /* ------------------------------------------------------------------------
+     7. Navigation & Footer Primitives
+     ------------------------------------------------------------------------ */
+  .nav-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.5rem;
+    padding: 0.5rem 0.875rem;
+    border-radius: var(--lw-radius-md);
+    font-size: 0.9375rem; /* 15px */
+    font-weight: 500;
+    color: var(--lw-text-secondary);
+    text-decoration: none;
+    transition: color 150ms ease, background-color 150ms ease;
+  }
+
+  .nav-link:hover {
+    color: var(--lw-navy);
+    background-color: var(--lw-surface-subtle);
+  }
+
+  .nav-link-active {
+    color: var(--lw-navy);
+    font-weight: 600;
+    background-color: var(--lw-teal-50);
+  }
+
+  .nav-link-active::after {
+    content: "";
+    position: absolute;
+    left: 0.875rem;
+    right: 0.875rem;
+    bottom: 0.1875rem;
+    height: 2px;
+    border-radius: var(--lw-radius-full);
+    background-color: var(--lw-teal);
+  }
+
+  .mobile-nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: var(--lw-touch-target);
+    padding: 0.625rem 0.875rem;
+    border-radius: var(--lw-radius-md);
+    font-size: 1rem; /* 16px mobile-first */
+    font-weight: 500;
+    color: var(--lw-text);
+    text-decoration: none;
+    transition: color 150ms ease, background-color 150ms ease;
+  }
+
+  .mobile-nav-link:hover {
+    color: var(--lw-navy);
+    background-color: var(--lw-surface-subtle);
+  }
+
+  .mobile-nav-link-active {
+    color: var(--lw-teal-800);
+    font-weight: 600;
+    background-color: var(--lw-teal-50);
+  }
+
+  .footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-block: 0.25rem;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.78);
+    text-decoration: none;
+    transition: color 150ms ease, transform 150ms ease;
+  }
+
+  .footer-link:hover {
+    color: #ffffff;
+    transform: translateX(2px);
+  }
+
+  .footer-link-active {
+    color: var(--lw-teal-200);
+    font-weight: 600;
+  }
 }
