@@ -9,11 +9,13 @@ import MainLayout from './components/layout/MainLayout.jsx'
 import CreateReport from './pages/CreateReport.jsx'
 import ExploreReports from './pages/ExploreReports.jsx'
 import Home from './pages/Home.jsx'
+import Login from './pages/Login.jsx'
+import Register from './pages/Register.jsx'
 import ReportDetail from './pages/ReportDetail.jsx'
 
 /**
- * Penanda rute sementara di dalam MainLayout untuk halaman yang akan dibangun
- * pada tahap berikutnya.
+ * Penanda rute sementara di dalam MainLayout untuk halaman informasi yang akan
+ * dibangun pada tahap berikutnya.
  */
 function RouteSectionNotice({ eyebrow, title, description }) {
   return (
@@ -51,6 +53,10 @@ function App() {
           <Route path="/laporan" element={<ExploreReports />} />
           <Route path="/laporan/:id" element={<ReportDetail />} />
           <Route path="/buat-laporan" element={<CreateReport />} />
+          <Route path="/masuk" element={<Login />} />
+          <Route path="/daftar" element={<Register />} />
+          <Route path="/login" element={<Navigate to="/masuk" replace />} />
+          <Route path="/register" element={<Navigate to="/daftar" replace />} />
           <Route
             path="/panduan"
             element={
@@ -68,16 +74,6 @@ function App() {
                 eyebrow="Publik • Profil Layanan"
                 title="Tentang Platform LaporWarga"
                 description="Informasi mengenai tujuan layanan, transparansi tindak lanjut, dan peran pengelola lingkungan."
-              />
-            }
-          />
-          <Route
-            path="/masuk"
-            element={
-              <RouteSectionNotice
-                eyebrow="Autentikasi • Akun Warga & Admin"
-                title="Masuk ke Akun LaporWarga"
-                description="Halaman login dan registrasi pengguna akan diimplementasikan pada tahap pembuatan halaman autentikasi."
               />
             }
           />
